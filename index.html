@@ -30,7 +30,7 @@
           <tr ng-repeat="item in sale.items">
 
             <td>{{item.name}}</td>
-            <td>{{(item.price - item.discount) * sale.taxRate}}
+            <td>{{(item.price - item.discount) * sale.taxRate | number:0}}
             <img src="image/sale.jpg" ng-hide="item.discount > 0"></td>
             <td>{{item.quantity}}</td>
             <td>{{item.color}}</td>
