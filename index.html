@@ -9,13 +9,33 @@
 
 <body>
 
-    <main ng-controller="ShopController as items">
+    <main ng-controller="ShopController as sale">
 
         <h1>Shopular where you can truly shop freely</h1>
 
-        <ul>
-          <li>{{items.data}}</li>
-        </ul>
+        <table>
+          <th>Item ID</th>
+          <th>name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Color</th>
+          <th>Discount</th>
+
+
+
+          <tr ng-repeat="item in sale.items">
+
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{item.color}}</td>
+            <td>{{item.discount}}</td>
+            <!-- <td>{{item.discount}}</td> -->
+
+
+          </tr>
+        </table>
 
     </main>
 
