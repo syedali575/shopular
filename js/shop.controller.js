@@ -27,7 +27,7 @@
     ];
 
     this.taxRate = 1.0575;
-    console.log(this.items[0].price * this.taxRate);
+    // console.log(this.items[0].price * this.taxRate);
 
 
   }

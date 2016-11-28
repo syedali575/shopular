@@ -31,7 +31,7 @@
             <td>{{item.quantity}}</td>
             <td>{{item.color}}</td>
             <td>{{item.discount}}</td>
-            <!-- <td>{{item.discount}}</td> -->
+            <td>{{(item.price - item.discount) * sale.taxRate}}</td>
 
 
           </tr>
