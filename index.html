@@ -8,32 +8,32 @@
 
 
 <body>
+  <header>
+
+  </header>
 
     <main ng-controller="ShopController as sale">
 
         <h1>Shopular where you can truly shop freely</h1>
 
         <table>
-          <th>Item ID</th>
           <th>name</th>
           <th>Price</th>
           <th>Quantity</th>
           <th>Color</th>
-          <th>Discount</th>
+
+
+
 
 
 
           <tr ng-repeat="item in sale.items">
 
-            <td>{{item.id}}</td>
             <td>{{item.name}}</td>
-            <td>{{item.price}}</td>
+            <td>{{(item.price - item.discount) * sale.taxRate}}
+            <img src="image/sale.jpg" ng-hide="item.discount > 0"></td>
             <td>{{item.quantity}}</td>
             <td>{{item.color}}</td>
-            <td>{{item.discount}}</td>
-            <td>{{(item.price - item.discount) * sale.taxRate}}</td>
-
-
           </tr>
         </table>
 
