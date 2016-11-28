@@ -1,7 +1,16 @@
-header {
-  background-color: yellow; }
+header h1 {
+  text-align: center; }
 
 body {
   background-color: #a2e7e3; }
+
+main table, main th, main td {
+  border: 1px solid #5d615f;
+  width: 80%;
+  margin: 0 auto; }
+main tr:nth-child(odd) {
+  background-color: #eee8b0; }
+main td {
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
