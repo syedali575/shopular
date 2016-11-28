@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html ng-app="shop">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Shopular</title>
-  </head>
-  <body>
+</head>
 
-    <h1>Shopular</h1>
+
+<body>
+
+    <main ng-controller="ShopController as items">
+
+        <h1>Shopular where you can truly shop freely</h1>
+
+        <ul>
+          <li>{{items.data}}</li>
+        </ul>
+
+    </main>
+
+
 
     <script src="node_modules/angular/angular.js"></script>
-    <script src="js/shop.controller.js"></script>
     <script src="js/shop.module.js"></script>
+    <script src="js/shop.controller.js"></script>
 
-  </body>
+</body>
+
 </html>

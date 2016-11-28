@@ -1,8 +1,9 @@
 (function() {
   'use strict';
 
-  angular.module("shop", []);
+  console.log("in module");
 
+  angular.module("shop", []);
 
 
 
