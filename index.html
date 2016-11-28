@@ -2,40 +2,37 @@
 <html ng-app="shop">
 
 <head>
-    <meta charset="utf-8">
-    <title>Shopular</title>
+  <meta charset="utf-8">
+  <title>Shopular</title>
+
+  <link rel="stylesheet" href="normalize.css" type="text/css">
+  <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
 
 <body>
   <header>
-
+    <h1>Shopular where you can truly shop freely</h1>
   </header>
 
-    <main ng-controller="ShopController as sale">
-
-        <h1>Shopular where you can truly shop freely</h1>
-
-        <table>
-          <th>name</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Color</th>
+  <main ng-controller="ShopController as sale">
 
 
 
+    <table>
+      <th>name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Color</th>
 
-
-
-          <tr ng-repeat="item in sale.items">
-
-            <td>{{item.name}}</td>
-            <td>{{(item.price - item.discount) * sale.taxRate | number:0}}
-            <img src="image/sale.jpg" ng-hide="item.discount > 0"></td>
-            <td>{{item.quantity}}</td>
-            <td>{{item.color}}</td>
-          </tr>
-        </table>
+      <tr ng-repeat="item in sale.items">
+        <td>{{item.name}}</td>
+        <td>{{(item.price - item.discount) * sale.taxRate | number:0}}
+          <img src="image/sale.jpg" ng-hide="item.discount > 0"></td>
+          <td>{{item.quantity}}</td>
+          <td>{{item.color}}</td>
+        </tr>
+      </table>
 
     </main>
 
@@ -45,6 +42,6 @@
     <script src="js/shop.module.js"></script>
     <script src="js/shop.controller.js"></script>
 
-</body>
+  </body>
 
-</html>
+  </html>
