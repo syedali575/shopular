@@ -26,7 +26,7 @@
           <th>Color</th>
         </tr>
 
-        <tr ng-repeat="item in sale.items">
+        <tr ng-repeat="item in sale.items | orderBy:sale.sortOrder">
           <td>{{item.name}}</td>
           <td>{{(item.price - item.discount) * sale.taxRate | currency}}
           <img src="image/sale.jpg" ng-hide="item.discount === 0"></td>

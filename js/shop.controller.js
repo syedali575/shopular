@@ -8,6 +8,7 @@
 
 
   function ShopController(){
+    this.sortOrder = "price";
     this.newItem = {};
     this.items = [
 
