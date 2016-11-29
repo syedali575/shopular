@@ -2,7 +2,7 @@ main{
 
 
   form{
-  @include centering(80%);
+    @include centering(80%);
   }
 
   table, th, td{
@@ -13,7 +13,6 @@ main{
   tr:nth-child(odd){
     background-color: $stripeColor;
   }
-
 
   td {
     text-align: center;

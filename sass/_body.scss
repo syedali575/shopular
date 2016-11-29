@@ -1,10 +1,17 @@
 body {
-  background-color: $bodyBackGroudColor;
+  background-color: $bodyBackGroundColor;
 
+[ng-cloak] {
+  display: none;
+}
 
+.ng-invalid.ng-touched {
+  border: 1px solid #db0303;
+}
 
-
-
-
+p {
+  text-align: center;
+  font-size: 1.2em;
+}
 
 }

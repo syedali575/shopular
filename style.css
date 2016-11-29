@@ -3,7 +3,17 @@ header h1 {
 
 body {
   background-color: #a2e7e3; }
+  body [ng-cloak] {
+    display: none; }
+  body .ng-invalid.ng-touched {
+    border: 1px solid #db0303; }
+  body p {
+    text-align: center;
+    font-size: 1.2em; }
 
+main form {
+  width: 80%;
+  margin: 0 auto; }
 main table, main th, main td {
   border: 1px solid #5d615f;
   width: 80%;
