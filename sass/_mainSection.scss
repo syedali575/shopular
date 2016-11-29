@@ -1,6 +1,7 @@
 main{
 
 
+
   table, th, td{
     border: $tableBorder;
     @include centering(80%);
