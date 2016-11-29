@@ -42,8 +42,8 @@
       });
     };
 
-    this.sortCategory = function sortCategory(){
-
+    this.sortCategory = function sortCategory(sortOrder){
+      this.sortOrder = sortOrder;
     };
 
 
