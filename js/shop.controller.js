@@ -6,9 +6,9 @@
   angular.module("shop")
   .controller("ShopController", ShopController);
 
-  function ShopController(){
-    // console.log("in Controller");
 
+  function ShopController(){
+    this.newItem = {};
     this.items = [
 
       { "id": 2957, "name": "widget", "price": 32, "quantity": 203, "color": "red", "discount": 31 },
@@ -27,8 +27,19 @@
     ];
 
     this.taxRate = 1.0575;
-    // console.log(this.items[0].price * this.taxRate);
 
+
+
+    this.addProduct = function addProduct(product){
+      console.log("hello");
+      this.items.push({
+        name: product.name,
+        price: product.price,
+        quantity: product.quantity,
+        discount: product.discount,
+        color:product.color
+      });
+    };
 
   }
 

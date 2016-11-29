@@ -10,12 +10,12 @@
 </head>
 
 
-<body>
+<body ng-controller="ShopController as sale">
   <header>
     <h1>Shopular where you can truly shop freely</h1>
   </header>
 
-  <main ng-controller="ShopController as sale">
+  <main>
 
     <table>
       <tr>
@@ -37,14 +37,18 @@
   </main>
 
   <main>
-    <form>
-      <input type="text" name="" value="" placeholder="Name">
-      <input type="text" name="" value="" placeholder="Price">
-      <input type="text" name="" value="" placeholder="Quantity">
-      <input type="text" name="" value="" placeholder="Color">
-      <input type="text" name="" value="" placeholder="Discount">
+    <form ng-submit="sale.addProduct(sale.newItem)">
+        <label for="name">Name</label>
+      <input id="name"type="text" placeholder="Name" ng-model="sale.newItem.name">
+        <label for="Price">Price</label>
+      <input id="Price"istype="text" placeholder="Price" ng-model="sale.newItem.price">
+        <label for="quantity">Quantity</label>
+      <input id="quantity"type="text" placeholder="Quantity" ng-model="sale.newItem.quantity">
+        <label for="color">Color</label>
+      <input id="color"type="text" placeholder="Color" ng-model="sale.newItem.color">
+      <!-- <input type="text" placeholder="Discount" ng-model="newProduct.newItem.discount"> -->
 
-      <input type="submit" name="" value="Submit">
+      <input type="submit" value="Submit">
 
     </form>
   </main>
@@ -54,6 +58,7 @@
     <script src="node_modules/angular/angular.js"></script>
     <script src="js/shop.module.js"></script>
     <script src="js/shop.controller.js"></script>
+
 
   </body>
 
