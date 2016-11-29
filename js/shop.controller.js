@@ -7,7 +7,7 @@
   .controller("ShopController", ShopController);
 
   function ShopController(){
-    console.log("in Controller");
+    // console.log("in Controller");
 
     this.items = [
 
