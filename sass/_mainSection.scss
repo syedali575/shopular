@@ -1,6 +1,9 @@
 main{
 
 
+  form{
+  @include centering(80%);
+  }
 
   table, th, td{
     border: $tableBorder;

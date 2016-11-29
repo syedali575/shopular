@@ -1,65 +1,59 @@
 <!DOCTYPE html>
 <html ng-app="shop">
 
-<head>
-  <meta charset="utf-8">
-  <title>Shopular</title>
+  <head>
+    <meta charset="utf-8">
+    <title>Shopular</title>
 
-  <link rel="stylesheet" href="normalize.css" type="text/css">
-  <link rel="stylesheet" href="style.css" type="text/css">
-</head>
+    <link rel="stylesheet" href="normalize.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
 
 
-<body ng-controller="ShopController as sale">
-  <header>
-    <h1>Shopular where you can truly shop freely</h1>
-  </header>
+  <body ng-controller="ShopController as sale">
 
-  <main>
+    <header>
+      <h1>Shopular where you can truly shop freely</h1>
+    </header>
 
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Color</th>
-      </tr>
+    <main>
 
-      <tr ng-repeat="item in sale.items">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Color</th>
+        </tr>
+
+        <tr ng-repeat="item in sale.items">
           <td>{{item.name}}</td>
-          <td>{{(item.price - item.discount) * sale.taxRate | number:0}}
-          <img src="image/sale.jpg" ng-hide="item.discount > 0"></td>
+          <td>{{(item.price - item.discount) * sale.taxRate | currency}}
+          <img src="image/sale.jpg" ng-hide="item.discount === 0"></td>
           <td>{{item.quantity}}</td>
           <td>{{item.color}}</td>
-      </tr>
+        </tr>
 
-    </table>
-  </main>
+        </table>
+      </main>
 
-  <main>
-    <form ng-submit="sale.addProduct(sale.newItem)">
-        <label for="name">Name</label>
-      <input id="name"type="text" placeholder="Name" ng-model="sale.newItem.name">
-        <label for="Price">Price</label>
-      <input id="Price"istype="text" placeholder="Price" ng-model="sale.newItem.price">
-        <label for="quantity">Quantity</label>
-      <input id="quantity"type="text" placeholder="Quantity" ng-model="sale.newItem.quantity">
-        <label for="color">Color</label>
-      <input id="color"type="text" placeholder="Color" ng-model="sale.newItem.color">
-      <!-- <input type="text" placeholder="Discount" ng-model="newProduct.newItem.discount"> -->
-
-      <input type="submit" value="Submit">
-
-    </form>
-  </main>
+      <main>
+        <form class="form" ng-submit="sale.addProduct(sale.newItem)">
+          <input id="name"type="text" placeholder="Name" ng-model="sale.newItem.name">
+          <input id="Price"istype="text" placeholder="Price" ng-model="sale.newItem.price">
+          <input id="quantity"type="text" placeholder="Quantity" ng-model="sale.newItem.quantity">
+          <input id="color"type="text" placeholder="Color" ng-model="sale.newItem.color">
+          <input id="discount"type="text" placeholder="Discount" ng-model="sale.newItem.discount">
+          <input type="submit" value="Submit">
+        </form>
+      </main>
 
 
+      <script src="node_modules/angular/angular.js"></script>
+      <script src="js/shop.module.js"></script>
+      <script src="js/shop.controller.js"></script>
 
-    <script src="node_modules/angular/angular.js"></script>
-    <script src="js/shop.module.js"></script>
-    <script src="js/shop.controller.js"></script>
 
-
-  </body>
+    </body>
 
   </html>

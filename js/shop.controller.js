@@ -34,9 +34,9 @@
       console.log("hello");
       this.items.push({
         name: product.name,
-        price: product.price,
-        quantity: product.quantity,
-        discount: product.discount,
+        price: Number(product.price),
+        quantity: Number(product.quantity),
+        discount: Number(product.discount),
         color:product.color
       });
     };
