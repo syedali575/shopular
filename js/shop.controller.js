@@ -26,13 +26,15 @@
       { "id": 683, "name": "pillow", "price": 27, "quantity": 10, "color": "black", "discount": 12 }
 
     ];
-    
+
     this.taxRate = 1.0575;
 
 
-
+    /**
+     * Adds a new forsale item to inventory
+     * @param {Object} product name, price, quatity, discount, color must be provided
+     */
     this.addProduct = function addProduct(product){
-      // console.log("hello");
       this.items.push({
         name: product.name,
         price: Number(product.price),
@@ -42,6 +44,10 @@
       });
     };
 
+    /**
+     * Sorts products forsale by product attribute (e.g. product price)
+     * @param  {ProductAtrribute} sortOrder product attribute to sort by
+     */
     this.sortCategory = function sortCategory(sortOrder){
       this.sortOrder = sortOrder;
     };
