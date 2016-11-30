@@ -8,7 +8,7 @@ body {
   body .ng-invalid.ng-touched {
     border: 1px solid #db0303; }
   body p {
-    text-align: center;
+    display: inline;
     font-size: .75em; }
   body footer {
     font-size: .25em; }

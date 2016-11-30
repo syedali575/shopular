@@ -41,19 +41,47 @@
         </table>
     </main>
 
-    <main>
+    <main class="form">
 
         <form novalidate class="form" name="newProduct" ng-submit="newProduct.$valid && sale.addProduct(sale.newItem)">
 
-            <p ng-show="newProduct.product.$touched && !newProduct.product.$valid">
-                Data for all fields must be provided!
+
+
+            <input  type="text" name="name" placeholder="Name" ng-model="sale.newItem.name" required>
+
+            <p name="name"
+            ng-show="newProduct.name.$touched && !newProduct.name.$valid">
+            Please enter Name.
             </p>
 
-            <input  type="text" name="product" placeholder="Name" ng-model="sale.newItem.name" required>
-            <input  type="text" name="product" placeholder="Price" ng-model="sale.newItem.price" required>
-            <input  type="text" name="product" placeholder="Quantity" ng-model="sale.newItem.quantity" required>
-            <input  type="text" name="product" placeholder="Color" ng-model="sale.newItem.color" required>
-            <input  type="text" name="product" placeholder="Discount" ng-model="sale.newItem.discount" required>
+            <input  type="text" name="price" placeholder="Price" ng-model="sale.newItem.price" required>
+
+            <p name="price"
+            ng-show="newProduct.price.$touched && !newProduct.price.$valid">
+            Please enter Price!
+            </p>
+
+            <input  type="text" name="quantity" placeholder="Quantity" ng-model="sale.newItem.quantity" required>
+
+            <p name="quantity"
+            ng-show="newProduct.quantity.$touched && !newProduct.quantity.$valid">
+            Please enter Quantity!
+            </p>
+
+            <input  type="text" name="color" placeholder="Color" ng-model="sale.newItem.color" required>
+
+            <p name="color"
+            ng-show="newProduct.color.$touched && !newProduct.color.$valid">
+            Please enter Color!
+            </p>
+
+            <input  type="text" name="discount" placeholder="Discount" ng-model="sale.newItem.discount" required>
+
+            <p name="discount"
+            ng-show="newProduct.discount.$touched && !newProduct.discount.$valid">
+            Please enter Discount!
+            </p>
+
             <input type="submit" value="Submit">
         </form>
     </main>

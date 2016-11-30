@@ -38,9 +38,9 @@
 
 
     /**
-     * [getAll description]
-     * @return {[type]} [description]
-     */
+    * [getAll description]
+    * @return {[type]} [description]
+    */
     function getAll() {
       return items;
     }
@@ -48,9 +48,9 @@
 
 
     /**
-     * Adds a new forsale item to inventory
-     * @param {Object} product name, price, quatity, discount, color must be provided
-     */
+    * Adds a new forsale item to inventory
+    * @param {Object} product name, price, quatity, discount, color must be provided
+    */
     function addNew(product) {
       items.push({
         name: product.name,
@@ -63,13 +63,12 @@
 
       update();
     }
-
-
+    
 
     /**
-     * [update description]
-     * @return {[type]} [description]
-     */
+    * [update description]
+    * @return {[type]} [description]
+    */
     function update(){
       localStorage.setItem("items", angular.toJson(items));
     }
