@@ -26,13 +26,13 @@
       { "id": 683, "name": "pillow", "price": 27, "quantity": 10, "color": "black", "discount": 12 }
 
     ];
-
+    
     this.taxRate = 1.0575;
 
 
 
     this.addProduct = function addProduct(product){
-      console.log("hello");
+      // console.log("hello");
       this.items.push({
         name: product.name,
         price: Number(product.price),

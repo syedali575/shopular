@@ -1,9 +1,9 @@
 (function() {
-  'use strict';
+    'use strict';
 
-  console.log("in module");
+    console.log("in module");
 
-  angular.module("shop", []);
+    angular.module("shop", []);
 
 
 
