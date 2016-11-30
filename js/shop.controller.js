@@ -15,7 +15,9 @@
 
     this.taxRate = 1.0575;
 
+    this.items = ProductService.getAll();
 
+    console.log(this.items);
     /**
      * [addProduct description]
      * @param {[type]} product [description]

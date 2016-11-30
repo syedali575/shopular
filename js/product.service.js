@@ -1,7 +1,9 @@
 (function() {
   'use strict';
 
-  console.log("Product Service");
+
+  var storedItems = JSON.parse(localStorage.getItem("items"));
+  console.log(storedItems);
 
   angular.module("shop")
   .factory("ProductService", ProductService);
@@ -9,7 +11,7 @@
   function ProductService(){
 
 
-    var items = [
+    var items = storedItems || [
 
       { "id": 2957, "name": "widget", "price": 32, "quantity": 203, "color": "red", "discount": 31 },
       { "id": 89274, "name": "golf club", "price": 98, "quantity": 10, "color": "black", "discount": 0 },
@@ -28,10 +30,12 @@
 
 
     return {
-      get: getAll,
+      getAll: getAll,
       addNew: addNew,
       update: update
     };
+
+
 
     /**
      * [getAll description]
@@ -54,9 +58,12 @@
         quantity: Number(product.quantity),
         discount: Number(product.discount),
         color:product.color
+
       });
-      console.log(items);
+
+      update();
     }
+
 
 
     /**
@@ -64,7 +71,7 @@
      * @return {[type]} [description]
      */
     function update(){
-
+      localStorage.setItem("items", angular.toJson(items));
     }
 
   }
