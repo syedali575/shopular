@@ -45,11 +45,17 @@
     };
 
     /**
-     * Sorts products forsale by product attribute (e.g. product price)
-     * @param  {ProductAtrribute} sortOrder product attribute to sort by
+     * Sorts products forsale by product property(e.g. product price)
+     * @param  {String} sortOrder product property to sort by
      */
     this.sortCategory = function sortCategory(sortOrder){
-      this.sortOrder = sortOrder;
+      if(this.sortOrder === sortOrder){
+        this.sortOrder="-" + sortOrder;
+      }
+      else{
+        this.sortOrder = sortOrder;
+      }
+
     };
 
 
