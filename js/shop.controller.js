@@ -1,10 +1,12 @@
 (function() {
   'use strict';
 
-
+  console.log("Shop Controller");
 
   angular.module("shop")
   .controller("ShopController", ShopController);
+
+  // ShopController.$inject = ["ProductService"];
 
 
   function ShopController(){
