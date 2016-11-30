@@ -10,6 +10,8 @@ body {
   body p {
     text-align: center;
     font-size: 1.2em; }
+  body footer {
+    font-size: .25em; }
 
 main form {
   width: 80%;
