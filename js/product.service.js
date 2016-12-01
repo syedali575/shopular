@@ -1,9 +1,9 @@
 (function() {
   'use strict';
 
-
+  // To retrieve most upto date items list from local storage
   var storedItems = JSON.parse(localStorage.getItem("items"));
-  console.log(storedItems);
+
 
   angular.module("shop")
   .factory("ProductService", ProductService);
@@ -28,7 +28,7 @@
 
     ];
 
-
+    // All functions created in services must be added here; so they are accessible in controller.
     return {
       getAll: getAll,
       addNew: addNew,
@@ -38,8 +38,8 @@
 
 
     /**
-    * [getAll description]
-    * @return {[type]} [description]
+    * To return list of all items
+    * @return {Array} list of all items
     */
     function getAll() {
       return items;
@@ -60,14 +60,14 @@
         color:product.color
 
       });
-
+      // calling update function so we can add and update
       update();
     }
-    
+
 
     /**
-    * [update description]
-    * @return {[type]} [description]
+    * Store current inventory list to local storage
+    * @param {Array} [description] List of product forsale
     */
     function update(){
       localStorage.setItem("items", angular.toJson(items));
