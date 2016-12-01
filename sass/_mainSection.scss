@@ -1,6 +1,16 @@
 main{
 
 
+
+
+  [ng-cloak] {
+    display: none;
+  }
+
+  .ng-invalid.ng-touched {
+    border: 1px solid #db0303;
+  }
+
   form{
     @include centering(80%);
   }
@@ -18,7 +28,10 @@ main{
     text-align: center;
   }
 
-
+  p {
+    display: inline;
+    font-size: .75em;
+  }
 
 
 

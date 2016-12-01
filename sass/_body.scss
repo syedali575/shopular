@@ -1,22 +1,9 @@
 body {
   background-color: $bodyBackGroundColor;
 
-  [ng-cloak] {
-    display: none;
-  }
 
-  .ng-invalid.ng-touched {
-    border: 1px solid #db0303;
-  }
 
-  p {
-    display: inline;
-    font-size: .75em;
-  }
 
-  footer {
-    font-size: .25em;
 
-  }
 
 }

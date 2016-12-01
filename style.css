@@ -3,16 +3,11 @@ header h1 {
 
 body {
   background-color: #a2e7e3; }
-  body [ng-cloak] {
-    display: none; }
-  body .ng-invalid.ng-touched {
-    border: 1px solid #db0303; }
-  body p {
-    display: inline;
-    font-size: .75em; }
-  body footer {
-    font-size: .25em; }
 
+main [ng-cloak] {
+  display: none; }
+main .ng-invalid.ng-touched {
+  border: 1px solid #db0303; }
 main form {
   width: 80%;
   margin: 0 auto; }
@@ -24,5 +19,16 @@ main tr:nth-child(odd) {
   background-color: #eee8b0; }
 main td {
   text-align: center; }
+main p {
+  display: inline;
+  font-size: .75em; }
+
+footer {
+  font-size: .25em; }
+  footer p {
+    display: block;
+    color: #226ae4;
+    padding-left: 45%;
+    padding-top: 2%; }
 
 /*# sourceMappingURL=style.css.map */
