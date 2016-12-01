@@ -8,9 +8,14 @@
     .controller("UserController", UserController);
 
 
+
+
     UserController.$inject=["UserService"];
 
-    function UserController(){
+    function UserController(UserService){
+
+      this.newUser = {};
+
       function serviceUserLogin(){
           UserService.userLogin(login);
       }

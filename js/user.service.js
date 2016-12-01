@@ -19,7 +19,7 @@
 
     function userLogin(login){
       userInfo.push({
-        user: login.name,
+        user: user.name,
         time: Date.now(),
       });
 
