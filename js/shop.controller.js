@@ -9,7 +9,7 @@
   ShopController.$inject = ["ProductService"];
 
 
-  // ProductService must be passed as argument here so we can access function in services in controller.
+  // ProductService must be passed as argument here so we can access services in controller.
   function ShopController(ProductService){
 
     this.sortOrder = "price";
@@ -21,12 +21,13 @@
 
 
     /**
-    * Calling addNew() function in service
+    * Calling addNew() function in service by using this function
     * @param {Object} product product must be used as argument to connect this function to service.
     */
     this.addProduct = function addProduct(){
       ProductService.addNew(product);
     };
+    
 
     /**
     * Sorts products forsale by product property(e.g. product price)

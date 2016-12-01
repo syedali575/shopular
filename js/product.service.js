@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  // To retrieve most upto date items list from local storage
+  // To retrieve forsale list of items from local storage to display on refresh
   var storedItems = JSON.parse(localStorage.getItem("items"));
 
 
@@ -39,7 +39,7 @@
 
     /**
     * To return list of all items
-    * @return {Array} list of all items
+    * @return {Array} list of all items in inventory
     */
     function getAll() {
       return items;
@@ -58,16 +58,15 @@
         quantity: Number(product.quantity),
         discount: Number(product.discount),
         color:product.color
-
       });
-      // calling update function so we can add and update
+      // calling update function so we can add and update at the same time
       update();
     }
 
 
     /**
-    * Store current inventory list to local storage
-    * @param {Array} [description] List of product forsale
+    * To store current inventory list to local storage
+    * @param {Array} [description] List of forsale items in inventory
     */
     function update(){
       localStorage.setItem("items", angular.toJson(items));
