@@ -32,6 +32,11 @@
       expect(result).to.equal(2);
     });
 
+    it("should have correct scope variables", function(){
+      expect(ShopController.items).to.be.an("array");
+      expect(ShopController.items.length).to.equal(1);
+    });
+
 
 
   });
