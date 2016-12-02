@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "angular": "^1.5.9",
+    "angular-mocks": "^1.5.9",
     "chai": "^3.5.0",
     "grunt": "^1.0.1",
     "grunt-karma": "^2.0.0",

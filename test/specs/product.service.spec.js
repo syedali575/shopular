@@ -1,14 +1,29 @@
 (function() {
   'use strict';
 
-  var expect = chai.ecpect;
+  var expect = chai.expect;
 
 
   describe("product service", function(){
+    var ProductService;
 
-    it("should add one and one", function(){
+    beforeEach(module("shop"));
 
-      expect(1+1).to.equal(2);
+    beforeEach(inject(function(_ProductService_){
+
+      ProductService = _ProductService_;
+    }));
+
+
+
+
+    it("should be able to get an array of products", function(){
+      var result = ProductService.getAll();
+      expect(result).to.be.an('array');
+
+
+
+
 
     });
 
