@@ -19,5 +19,19 @@
   "dependencies": {
     "angular": "^1.5.9",
     "normalize": "*"
+  },
+  "devDependencies": {
+    "angular": "^1.5.9",
+    "chai": "^3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-karma": "^2.0.0",
+    "karma": "^1.3.0",
+    "karma-chai": "^0.1.0",
+    "karma-coverage": "^1.1.1",
+    "karma-mocha": "^1.3.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "mocha": "^3.2.0",
+    "mocks": "0.0.15",
+    "phantomjs-prebuilt": "^2.1.13"
   }
 }

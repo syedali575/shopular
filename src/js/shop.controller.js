@@ -24,10 +24,10 @@
     * Calling addNew() function in service by using this function
     * @param {Object} product product must be used as argument to connect this function to service.
     */
-    this.addProduct = function addProduct(){
+    this.addProduct = function addProduct(product){
       ProductService.addNew(product);
     };
-    
+
 
     /**
     * Sorts products forsale by product property(e.g. product price)
