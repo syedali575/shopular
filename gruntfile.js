@@ -36,7 +36,7 @@ module.exports = function(grunt) {
                         'src/js/shop.controller.js',
                         'src/js/product.service.js',
                         'test/specs/product.service.spec.js',
-                        'test/specs/registrar.controller.spec.js'
+                        'test/specs/shop.controller.spec.js'
                     ]
                 }
             }
