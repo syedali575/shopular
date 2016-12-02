@@ -2,14 +2,13 @@
   'use strict';
 
   // To retrieve forsale list of items from local storage to display on refresh
-  var storedItems = JSON.parse(localStorage.getItem("items"));
-
 
   angular.module("shop")
   .factory("ProductService", ProductService);
 
   function ProductService(){
 
+    var storedItems = JSON.parse(localStorage.getItem("items"));
 
     var items = storedItems || [
 
@@ -69,6 +68,7 @@
     * @param {Array} [description] List of forsale items in inventory
     */
     function update(){
+      console.log('array', items);
       localStorage.setItem("items", angular.toJson(items));
     }
 
