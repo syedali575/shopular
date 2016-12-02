@@ -19,6 +19,7 @@
     it("should be able to get an array of products", function(){
       var result = ProductService.getAll();
       expect(result).to.be.an('array');
+    
 
 
 
