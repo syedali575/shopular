@@ -22,9 +22,11 @@
       };
 
       mockProductService.addNew = function(argOne) {
-        mockProductService.addNew.numTimesCalled++;
-        mockProductService.addNew.lastArgument = argOne;
+      mockProductService.addNew.numTimesCalled++;
+      mockProductService.addNew.lastArgument = argOne;
       };
+
+      mockProductService.addNew.numTimesCalled = 0;
 
       ShopController = $controller("ShopController");
     }));
@@ -33,6 +35,9 @@
     it("Should have correct scope variables", function(){
       expect(ShopController.items).to.be.an("array");
       expect(ShopController.items.length).to.equal(1);
+      expect(ShopController.sortOrder).to.equal("price");
+      expect(ShopController.taxRate).to.equal(1.0575);
+
     });
 
     it("Should require proper data type for each property", function(){
@@ -45,10 +50,10 @@
 
     it("Should add items into array from service function", function(){
 
-        var addNewItem={};
-        ShopController.newItem.plane = "Jet";
+        var addNewItem={plane: 'Jet'};
         ShopController.addProduct(addNewItem);
-        expect(ShopController.newItem.plane).to.equal("Jet");
+        expect(mockProductService.addNew.lastArgument.plane).to.equal("Jet");
+        expect(mockProductService.addNew.numTimesCalled).to.equal(1);
     });
 
 
