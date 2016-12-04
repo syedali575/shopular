@@ -14,15 +14,20 @@
     }));
 
     beforeEach(inject(function($controller){
+
       mockProductService.getAll = function(){
         return [
           { name: "Boat", price: 100, quantity: 1, color: "Blue"}
         ];
       };
+
+
       mockProductService.addNew = function(argOne) {
         mockProductService.addNew.numTimesCalled++;
         mockProductService.addNew.lastArgument = argOne;
       };
+
+
 
       ShopController = $controller("ShopController");
     }));
@@ -50,6 +55,22 @@
         ShopController.addProduct(addNewItem);
         expect(ShopController.newItem.plane).to.equal("Jet");
     });
+
+
+
+    it("Should reset sort order if I pass price as an argument", function(){
+      ShopController.sortCategory("price");
+      expect(ShopController.sortOrder).to.equal("-price");
+    });
+
+
+    it("Should sort products by argument", function(){
+      ShopController.sortCategory("name");
+      expect(ShopController.sortOrder).to.equal("name");
+    });
+
+
+
 
 
   });
