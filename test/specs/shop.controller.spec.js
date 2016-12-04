@@ -21,13 +21,10 @@
         ];
       };
 
-
       mockProductService.addNew = function(argOne) {
         mockProductService.addNew.numTimesCalled++;
         mockProductService.addNew.lastArgument = argOne;
       };
-
-
 
       ShopController = $controller("ShopController");
     }));
@@ -36,8 +33,6 @@
     it("Should have correct scope variables", function(){
       expect(ShopController.items).to.be.an("array");
       expect(ShopController.items.length).to.equal(1);
-
-
     });
 
     it("Should require proper data type for each property", function(){
