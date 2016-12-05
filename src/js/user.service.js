@@ -13,18 +13,14 @@
 
     return {
       userLogin: userLogin
-
     };
 
 
-    function userLogin(login){
+    function userLogin(user){
       userInfo.push({
         user: user.name,
         time: Date.now(),
       });
-
-
-
     }
 
   }

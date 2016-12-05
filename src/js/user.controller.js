@@ -16,8 +16,8 @@
 
       this.newUser = {};
 
-      function serviceUserLogin(){
-          UserService.userLogin(login);
+      function serviceUserLogin(login){
+        UserService.userLogin(login);
       }
 
 
