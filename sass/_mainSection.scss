@@ -1,8 +1,6 @@
 main{
 
 
-
-
   [ng-cloak] {
     display: none;
   }
@@ -33,6 +31,8 @@ main{
     font-size: .75em;
   }
 
-
+  li {
+    list-style: none;
+  }
 
 }

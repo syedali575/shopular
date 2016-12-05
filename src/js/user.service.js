@@ -6,7 +6,7 @@
   angular.module("shop")
   .factory("UserService", UserService);
 
-
+  
   function UserService(){
 
     var userInfo = [{}];
@@ -15,13 +15,18 @@
       userLogin: userLogin
     };
 
-
-    function userLogin(user){
+    /**
+    * Adds user to userInfo array.
+    * @param  {[Object} user login name of the user
+    */
+    function userLogin(login){
       userInfo.push({
         user: user.name,
         time: Date.now(),
       });
     }
+
+    console.log(userInfo);
 
   }
 

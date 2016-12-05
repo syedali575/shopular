@@ -18,14 +18,15 @@
 
 
     <main ng-controller="UserController as user">
-      <form ng-submit="user.serviceUserLogin(user.newUser)"class="login">
-        <input ng-model="user.newUser.name" type="text" name="name" value="" placeholder="User Name">
-        <input type="submit" value="Submit">
+
+      <form ng-submit="user.serviceUserLogin(user.newUser)">
+        <input ng-model="user.newUser.name" type="text" name="name" placeholder="User Name">
+        <input type="submit" value="login">
       </form>
 
         <ul>
-          <li ng-bind="user.newUser.name">{{user.newUser}}</li>
-          <li>{{user.time}}</li>
+          <li>{{userInfo.newUser}}</li>
+          <li>{{userInfo.time}}</li>
         </ul>
 
     </main>

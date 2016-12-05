@@ -9,7 +9,7 @@
   function ProductService(){
     var storedItems = JSON.parse(localStorage.getItem("items"));
 
-      // var storedItems = JSON.parse(localStorage.getItem("items"));
+    // var storedItems = JSON.parse(localStorage.getItem("items"));
 
     var items = storedItems || [
 

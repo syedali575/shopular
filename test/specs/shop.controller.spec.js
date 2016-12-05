@@ -22,8 +22,8 @@
       };
 
       mockProductService.addNew = function(argOne) {
-      mockProductService.addNew.numTimesCalled++;
-      mockProductService.addNew.lastArgument = argOne;
+        mockProductService.addNew.numTimesCalled++;
+        mockProductService.addNew.lastArgument = argOne;
       };
 
       mockProductService.addNew.numTimesCalled = 0;
@@ -50,10 +50,10 @@
 
     it("Should add items into array from service function", function(){
 
-        var addNewItem={plane: 'Jet'};
-        ShopController.addProduct(addNewItem);
-        expect(mockProductService.addNew.lastArgument.plane).to.equal("Jet");
-        expect(mockProductService.addNew.numTimesCalled).to.equal(1);
+      var addNewItem={plane: 'Jet'};
+      ShopController.addProduct(addNewItem);
+      expect(mockProductService.addNew.lastArgument.plane).to.equal("Jet");
+      expect(mockProductService.addNew.numTimesCalled).to.equal(1);
     });
 
 
